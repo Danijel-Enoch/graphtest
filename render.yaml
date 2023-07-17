@@ -1,0 +1,13 @@
+services:
+  # A Docker web service
+  - type: web
+    name: webdis
+    runtime: docker
+    repo: https://github.com/Danijel-Enoch/graph-node-coredao.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: standard # optional (defaults to starter instance type)
+    branch: master # optional (defaults to master)
+    rootDir: graph-node-coredao/docker
+    dockerCommand: ./setup.sh && docker-compose up # optional (defaults to Dockerfile command)
+    numInstances: 3 # optional (defaults to 1)
+    healthCheckPath: /
