@@ -7,7 +7,7 @@ services:
     region: oregon # optional (defaults to oregon)
     plan: standard # optional (defaults to starter instance type)
     branch: master # optional (defaults to master)
-    rootDir: graph-node-coredao
+    rootDir: renderTest
     dockerCommand: cd docker &&  ./setup.sh && docker-compose up # optional (defaults to Dockerfile command)
     numInstances: 1 # optional (defaults to 1)
     healthCheckPath: /
